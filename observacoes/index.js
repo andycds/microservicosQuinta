@@ -8,7 +8,7 @@ const observacoesPorLembreteId = {};
 
 //:id é um placeholder
 //exemplo: /lembretes/123456/observacoes
-app.put('/lembretes/:id/observacoes', (req, res) => {
+app.post('/lembretes/:id/observacoes', (req, res) => {
     const idObs = uuidv4();
     const { texto } = req.body;
     const observacoesDoLembrete = observacoesPorLembreteId[req.params.id] || [];
